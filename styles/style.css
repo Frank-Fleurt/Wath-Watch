@@ -1,9 +1,20 @@
 body {
-  background: black;
+  background: #212040;
   color: white;
 }
 
-body #cardContainer {
+.card {
+  background: #070d2d;
+  border-radius: 80px;
+  min-width: 200px;
+  width: 20%;
+}
+
+.card p {
+  text-align: center;
+}
+
+#cardContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,21 +24,5 @@ body #cardContainer {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 10px;
-}
-
-body #cardContainer .card {
-  min-width: 200px;
-  width: 20%;
-  border: 1px solid white;
-  border-radius: 5px;
-}
-
-.card {
-  width: 25%;
-}
-
-.card img {
-  width: 90%;
-  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */

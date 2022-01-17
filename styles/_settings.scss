@@ -1,16 +1,4 @@
-body{
-  background: black;
+body {
+  background: rgb(33, 32, 64);
   color: white;
-  #cardContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    .card{
-      min-width: 200px;
-      width: 20%;
-      border: 1px solid white;
-      border-radius: 5px;
-    }
-  }
 }
