@@ -8,10 +8,10 @@ body #cardContainer {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 10px;
 }
 
@@ -27,11 +27,11 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #search {
@@ -49,14 +49,14 @@ form {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #randomSelection {
@@ -65,12 +65,13 @@ form {
   background: orange;
   padding: 5px;
   cursor: pointer;
-  margin-right: 20px;
 }
 
 #randomSelection:hover {
   -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 input {
@@ -87,7 +88,8 @@ input {
 }
 
 #btn1:hover {
-  color: #070d2d;
+  color: #1232e9;
+  background: #070d2d;
 }
 
 #btn2 {
@@ -100,6 +102,7 @@ input {
 
 #btn2:hover {
   background: #070d2d;
+  color: #ececee;
 }
 
 #sort {
@@ -108,13 +111,35 @@ input {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+#sort button {
+  width: 130px;
+  border: none;
+  cursor: pointer;
+}
+
+#sort button:hover {
+  background: #070d2d;
+}
+
+#better2Lower {
+  border-radius: 10px 10px 0px 0px;
+  background: #b9b9b9;
+  color: #f7f7f7;
+}
+
+#lower2Better {
+  border-radius: 0px 0px 10px 10px;
+  background: #f7f7f7;
+  color: #b9b9b9;
 }
 /*# sourceMappingURL=style.css.map */
