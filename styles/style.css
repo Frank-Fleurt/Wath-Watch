@@ -14,7 +14,7 @@ body {
   text-align: center;
 }
 
-#cardContainer {
+.card #cardContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
