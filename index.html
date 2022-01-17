@@ -5,22 +5,24 @@
   <title>Moovie</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
+  </header>
   <header>
-    <div id="search">
+    <div id="search"> <input type="submit" value="Notre selection" id="randomSelection">
+        <h1>What watch</h1>
       <form>
-        <input type="text" placeholder="Votre recherche">
-        <input type="submit" value="Rechercher">
+        <input type="text" placeholder="Votre recherche" id="searchInput">
+        <input type="submit" value="Rechercher" id="submitButton">
       </form>
     </div>
     <div id="sort">
-      <button id="=lower2Better"></button>
-      <button id="better2Lower"></button>
+      <button id="better2Lower">Meilleur note</button>
+      <button id="lower2Better">Moins bonne note</button>
     </div>
   </header>
   <div id="cardContainer"></div>
-  <script src="index.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>

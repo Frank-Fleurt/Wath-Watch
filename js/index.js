@@ -1,5 +1,5 @@
 let movieData = [];
-var buttons = document.querySelectorAll("button")
+const buttons = document.querySelectorAll("button");
 let genderId = [
   { id: 28, name: "Action" },
   { id: 12, name: "Adventure" },
@@ -22,15 +22,16 @@ let genderId = [
   { id: 37, name: "Western" },
 ];
 
-async function fetchMoovie() {
+async function fetchMovie(search) {
   await fetch(
-    "https://api.themoviedb.org/3/search/movie?api_key=7b2355d87ecc04dc9bd26b6254ac0133&query=star&language=fr-FR"
+    "https://api.themoviedb.org/3/search/movie?api_key=7b2355d87ecc04dc9bd26b6254ac0133&query=" +
+      search +
+      "&language=fr-FR"
   )
     .then((res) => res.json())
     .then((data) => (movieData = data.results));
 
   console.log(movieData);
-  console.log(genderId);
   movieDisplay();
 }
 
@@ -39,34 +40,41 @@ function movieDisplay(sort) {
     .slice(0, 30)
     .sort((a, b) => {
       if (sort === "lower2Better") {
-        return a.vote_average - b.vote_average
+        return a.vote_average - b.vote_average;
       } else if (sort === "better2Lower") {
-        return b.vote_average - a.vote_average
+        return b.vote_average - a.vote_average;
       }
     })
     .map(
-      (movie) => `
-          <div class="card">
-            <span>Details movie</span>
-            <img src="${
-              movie.poster_path == null
-                ? "./assets/img/generic-poster.png"
-                : "https://image.tmdb.org/t/p/w500" + movie.poster_path
-            }" class="moviePic" alt="Movie Poster">
-            <h2>${movie.title}</h2>
-            <p class="note">Note moyenne : ${movie.vote_average} ⭐</p>
-            
-            <p calss="synopsis" >${movie.overview}</p>
-          </div>
+      (movie) => 
         `
+        <div class="card">
+        <p>Details movie</p>
+        <img src="${
+          movie.poster_path == null
+          ? "./assets/img/generic-poster.png"
+          : "https://image.tmdb.org/t/p/w500" + movie.poster_path
+        }" class="moviePic" alt="Movie Poster" width="80%">
+        <h2>${movie.title}</h2>
+        <span class="note">Note moyenne : ${movie.vote_average} ⭐</span>
+        <span></span>
+        <p calss="synopsis" >${movie.overview}</p>
+        </div>
+        `
+
     )
     .join("");
+    
 }
 
-window.addEventListener("load", fetchMoovie);
+window.addEventListener("load", fetchMovie);
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    e.preventDefault()
+    e.preventDefault();
     movieDisplay(e.target.id);
-  })
-})
+  });
+});
+submitButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  fetchMovie(searchInput.value);
+});

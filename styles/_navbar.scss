@@ -1,0 +1,85 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#search {
+  margin: 0 40px 40px 40px;
+}
+h1 {
+  font-size: 3rem;
+  margin-top: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#randomSelection {
+  border: 1px solid black;
+  border-radius: 10px;
+  background: orange;
+  padding: 5px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: 0.2s;
+  }
+}
+input {
+  border: none;
+  padding: 5px;
+}
+#searchInput {
+  text-align: center;
+  background: rgb(247, 247, 247);
+  color: rgb(185, 185, 185);
+  border-radius: 10px 10px 0px 0px;
+  width: 170px;
+
+  &:hover {
+    color: rgb(18, 50, 233);
+    background: rgb(7, 13, 45);
+  }
+}
+#submitButton {
+  background: rgb(185, 185, 185);
+  color: rgb(247, 247, 247);
+  border-radius: 0px 0px 10px 10px;
+  width: 180px;
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(7, 13, 45);
+    color: rgb(236, 236, 238);
+  }
+}
+
+#sort {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+
+  button {
+    width: 130px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(7, 13, 45);
+    }
+  }
+}
+#better2Lower {
+  border-radius: 10px 10px 0px 0px;
+  background: rgb(185, 185, 185);
+  color: rgb(247, 247, 247);
+}
+#lower2Better {
+  border-radius: 0px 0px 10px 10px;
+  background: rgb(247, 247, 247);
+  color: rgb(185, 185, 185);
+}
