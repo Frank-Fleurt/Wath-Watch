@@ -21,4 +21,100 @@ body #cardContainer .card {
   border: 1px solid white;
   border-radius: 5px;
 }
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#search {
+  margin: 0 40px 40px 40px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 20px;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#randomSelection {
+  border: 1px solid black;
+  border-radius: 10px;
+  background: orange;
+  padding: 5px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+#randomSelection:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+input {
+  border: none;
+  padding: 5px;
+}
+
+#btn1 {
+  text-align: center;
+  background: #f7f7f7;
+  color: #b9b9b9;
+  border-radius: 10px 10px 0px 0px;
+  width: 170px;
+}
+
+#btn1:hover {
+  color: #070d2d;
+}
+
+#btn2 {
+  background: #b9b9b9;
+  color: #f7f7f7;
+  border-radius: 0px 0px 10px 10px;
+  width: 180px;
+  cursor: pointer;
+}
+
+#btn2:hover {
+  background: #070d2d;
+}
+
+#sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 /*# sourceMappingURL=style.css.map */
